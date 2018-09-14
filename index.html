@@ -3,105 +3,40 @@
 <html lang="en">
 <head>
 
+    <!-- import external css -->
+    <link rel="stylesheet" href="style.css">
+
     <!-- #1 #structure #title -->
     <title>chatter|app</title>
 
     <!-- We need to specify the character encoding, since we use chinese characters -->
     <meta charset="UTF-8">
-
-    <!-- #2 #css #elements -->
-    <style>
-
-        /* #2 #colorful #palette is:
-          * Background: #F5F5F5 (GREY 100)
-          * Primary Text: black
-
-          * Primary color: #3F51B5 (INDIGO)
-          * Primary color_text : white
-          * Accent color: #CDDC39 (LIME)
-          * Accent color_text: black
-          */
-
-        /*global styles */
-        * {
-            /* #2 #font #faces */
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            /* #2 #colorful #background */
-            background-color: #F5F5F5;
-        }
-
-        h1 {
-            /* #2 #colourful #app-bar */
-            background-color: #3F51B5;
-            color: white;
-        }
-
-        button {
-            /* #2 #colourful #plusfive */
-            background-color: #CDDC39;
-            color: black;
-            /* #2 #font capital #letters */
-            text-transform: uppercase;
-        }
-
-        /*styles for chat area*/
-        p {
-            /* #2 #colorful #channelandchat */
-            background-color: white;
-        }
-
-        strong {
-            /* #2 #font #locations need an extra element, we'll use strong for w3w locations */
-            text-transform: uppercase;
-        }
-
-        h3 {
-            /* #2 #font #metadata is now medium */
-            font-size: medium;
-        }
-
-        em {
-            /* #2 #font #remaining overrides the default italic appearance of em elements*/
-            font-size: larger;
-        }
-           
-        a {
-            /* Set all link color to primary text color */
-            /* Change the preset link color to primary text color */
-            color: #3F51B5
-        }
-
-    </style>
-
 </head>
 
 <body>
 
-<div style="width: 20%">
+<div>
     <!-- channel area -->
     <!-- #1 #channels #app-bar -->
-    <h1><img src="https://ip.lfe.mw.tum.de/sections/moocus.png" style="height: 56px;" alt="Moocus, a very talkative duck">chatter|app</h1>
+    <h1><img src="https://ip.lfe.mw.tum.de/sections/moocus.png" id="moocus-img" alt="Moocus, a very talkative duck">chatter|app</h1>
 
     <!-- #1 #channels #topics -->
     <!-- Set background to white -->
-    <div style="background-color: white">
+    <div id="channels-list">
         <!-- Remove the bullets by using CSS -->
-        <ul style="list-style-type: none">
+        <ul id="unordered-list">
             <!-- Each channel marked as favorite or not by adding image -->
             <li>#Yummy<img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="likeable channel"></li>
-            <li>#SevenContinents<img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="likeable channel"></li>
+            <li id="selected-channel">#SevenContinents<img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="likeable channel"></li>
             <li>#KillerApp<img src="https://ip.lfe.mw.tum.de/sections/star-o.png" alt="not likeable channel"></li>
             <li>#FirstPersonOnMars<img src="https://ip.lfe.mw.tum.de/sections/star-o.png" alt="not likeable channel"></li>
             <li>#Octoberfest<img src="https://ip.lfe.mw.tum.de/sections/star-o.png" alt="not likeable channel"></li>
         </ul>
         <!-- #1 #channels #buttons -->
         <!-- button background white, its not needed as it already white from the above div, but its here to satisfy the requirements -->
-        <div style="background-color: white">
+        <div id="tab-bar">
             <!-- Each button get its own image -->
-            <button>new<img src="https://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="light bulb o"></button>
+            <button id="new-selected">new<img src="https://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="light bulb o"></button>
             <button>trending<img src="https://ip.lfe.mw.tum.de/sections/fire.png" alt="fire"></button>
             <button>favorites<img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="star"></button>
         </div>
@@ -109,7 +44,7 @@
 </div>
 
 <!-- Make these containers use 80% of the browser’s width -->
-<div style="width: 80%">
+<div>
     <!-- chat area -->
     <!-- #1 #chat #name -->
     <h1>#SevenContinents
@@ -122,7 +57,7 @@
 
     <!-- #1 #chat #metadata contains location, weekday, day, and time -->
     <!-- Group each chat message in a container -->
-    <div>
+    <div class="message, mymessage">
         <h3>
             <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
             <!-- Connect the message creator locations with the w3w service. The map with the corresponding location be opened in a new tab. -->
@@ -139,7 +74,7 @@
 
     <!-- #1 #chat #metadata contains location, weekday, day, and time -->
     <!-- Group each chat message in a container -->
-    <div>
+    <div class="message">
         <h3>
             <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
             <!-- Connect the message creator locations with the w3w service. The map with the corresponding location be opened in a new tab. -->
@@ -156,7 +91,7 @@
 
     <!-- #1 #chat #metadata contains location, weekday, day, and time -->
     <!-- Group each chat message in a container -->
-    <div>
+    <div class="message">
         <h3>
             <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
             <!-- Connect the message creator locations with the w3w service. The map with the corresponding location be opened in a new tab. -->
@@ -173,7 +108,7 @@
 
     <!-- #1 #chat #metadata contains location, weekday, day, and time -->
     <!-- Group each chat message in a container -->
-    <div>
+    <div class="message">
         <h3>
             <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
             <!-- Connect the message creator locations with the w3w service. The map with the corresponding location be opened in a new tab. -->
@@ -190,7 +125,7 @@
 
     <!-- #1 #chat #metadata contains location, weekday, day, and time -->
     <!-- Group each chat message in a container -->
-    <div>
+    <div class="message">
         <h3>
             <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
             <!-- Connect the message creator locations with the w3w service. The map with the corresponding location be opened in a new tab. -->
@@ -207,7 +142,7 @@
 
     <!-- #1 #chat #metadata contains location, weekday, day, and time  -->
     <!-- Group each chat message in a container -->
-    <div>
+    <div class="message">
         <h3>
             <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
             <!-- Connect the message creator locations with the w3w service. The map with the corresponding location be opened in a new tab. -->

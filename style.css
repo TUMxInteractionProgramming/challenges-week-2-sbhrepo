@@ -1,0 +1,114 @@
+/* #2 #colorful #palette is:
+    * Background: #F5F5F5 (GREY 100)
+    * Primary Text: black
+
+    * Primary color: #3F51B5 (INDIGO)
+    * Primary color_text : white
+    * Accent color: #CDDC39 (LIME)
+    * Accent color_text: black
+    */
+
+
+/**************/    
+/*   Global   */
+/**************/    
+* {
+    /* #2 #font #faces */
+    font-family: 'Arial', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    /* #2 #colorful #background */
+    background-color: #F5F5F5;
+}
+button {
+    /* #2 #colourful #plusfive */
+    background-color: #CDDC39;
+    color: black;
+    /* #2 #font capital #letters */
+    text-transform: uppercase;
+}
+strong {
+    /* #2 #font #locations need an extra element, we'll use strong for w3w locations */
+    text-transform: uppercase;
+}
+
+/***************/
+/*   App bar   */
+/***************/
+h1 {
+    /* #2 #colourful #app-bar */
+    background-color: #3F51B5;
+    color: white;
+}
+#moocus-img {
+    height: 56px;
+}
+
+/*********************/
+/*   Channels list   */
+/*********************/
+#unordered-list {
+    list-style-type: none;
+    font-size: 16px;
+    padding: 16px;
+}
+#channels-list {
+    background-color: white;
+}
+#selected-channel {
+    border-left: 3px solid #3F51B5;
+}
+
+/***************/
+/*   Tab bar   */
+/***************/
+#tab-bar {
+    background-color: white;
+}
+#tab-bar button {
+    background-color: white;
+    border-style: none;
+    border: 0px;
+    font-size: 13px;
+    width: 33%;
+    height: 72px;
+    margin: 16px auto;
+}
+#new-selected {
+    border-bottom: 4px solid #3F51B5;
+}
+
+/****************/
+/*   Messages   */
+/****************/
+.mymessage {
+    width: 80%;
+    margin-bottom: 8px;
+    margin-left: 17.5%
+}
+.message {
+    width: 80%;
+    margin-bottom: 8px;
+    margin-left: 2.5%
+}
+p {
+    /* #2 #colorful #channelandchat */
+    background-color: white;
+    padding: 16px;
+}
+h3 {
+    /* #2 #font #metadata is now medium */
+    font-size: medium;
+}
+em {
+    /* #2 #font #remaining overrides the default italic appearance of em elements*/
+    font-size: larger;
+    font-style: normal;
+}
+a {
+    /* Set all link color to primary text color */
+    /* Change the preset link color to primary text color */
+    color: #3F51B5;
+}
